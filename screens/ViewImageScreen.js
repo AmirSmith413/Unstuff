@@ -1,5 +1,6 @@
 import React from "react";
-import { StyleSheet,Image } from "react-native";
+import { StyleSheet,Image,View } from "react-native";
+import color from "../config/color";
 
 function ViewImageScreen(props){
     return (
@@ -17,6 +18,22 @@ const styles = StyleSheet.create({
        container:{
         flex:1,
         backgroundColor:'#000'
+       },
+       loginButton:{
+        backgroundColor:'blue',
+        height:50,
+        width:50,
+        position:'absolute',
+        top:5,
+        right:20
+       },
+       deleteButton:{
+        backgroundColor:'blue',
+        height:50,
+        width:50,
+        position:'absolute',
+        top:5,
+        right:20
        }
 })
 

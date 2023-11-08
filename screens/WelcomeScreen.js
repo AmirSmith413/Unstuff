@@ -1,13 +1,18 @@
 import React from "react";
-import { ImageBackground,StyleSheet,View,Image,Text } from "react-native";
+import { ImageBackground,StyleSheet,View,Image,Text, Button } from "react-native";
+import color from "../config/color";
 
 function WelcomeScreen(props){
     return (
         <ImageBackground source={require('../assets/LivingRoom.jpg')} style={styles.background}>
         <Image style={styles.logo} source={require('../assets/UnStuffLogo.png')}/>
         <Text style={styles.tagline}>Unstuff Your Logo</Text>
-         <View style={styles.loginButton}/>
-         <View style={styles.registerButton}/>
+         <View style={styles.loginButton}> 
+         <Button title="Login" color='primary'/>
+         </View>
+         <View style={styles.registerButton}>
+         <Button title='Register' color='secondary'/>
+         </View>
         </ImageBackground>
     )
 }
@@ -19,13 +24,15 @@ const styles = StyleSheet.create({
     },
     loginButton:{
         width:'100%',
-        height:70,
-        backgroundColor:'blue'
+        height:50,
+        backgroundColor:color.primary,
+       
     },
     registerButton:{
         width:'100%',
-        height:70,
-        backgroundColor:'green'
+        height:50,
+        backgroundColor: color.secondary,
+       
     },
     logo:{
         width:200,
